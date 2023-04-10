@@ -118,7 +118,7 @@ model = MultinomialNB().fit(X_train, y_train)
 # Cross validate the model on the training data using 5-fold
 scores = cross_val_score(model, X_train, y_train, scoring='accuracy', cv=5)
 # Print the mean results of model accuracy
-print(f"Accuracy: {scores.mean()}")
+print(f"Mean result of model accuracy: {scores.mean()}")
 
 # Test the model on the test data
 y_pred = model.predict(X_test)
@@ -127,7 +127,7 @@ cm = confusion_matrix(y_test, y_pred)
 print(f"Confusion matrix:\n{cm}")
 # Print the accuracy of the model
 accuracy = accuracy_score(y_test, y_pred)
-print(f"Accuracy: {accuracy}")
+print(f"Accuracy of the model: {accuracy}")
 
 
 #print(train_tfidf)
